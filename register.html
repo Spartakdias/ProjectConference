@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | ConfHub</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <a class="logo" href="index.html">ConfHub</a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="conferences.html">Conferences</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <form class="panel" action="#" method="post">
+
+            <h1>Create account</h1>
+
+            <label>
+                First name
+                <input
+                    type="text"
+                    name="first"
+                    placeholder="Enter your first name"
+                    minlength="2"
+                    required
+                >
+            </label>
+
+            <label>
+                Last name
+                <input
+                    type="text"
+                    name="last"
+                    placeholder="Enter your last name"
+                    minlength="2"
+                    required
+                >
+            </label>
+
+            <label>
+                Email
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                >
+            </label>
+
+            <label>
+                Password
+                <input
+                    type="password"
+                    name="password"
+                    placeholder="Create a password"
+                    minlength="6"
+                    required
+                >
+            </label>
+
+            <label>
+                Confirm password
+                <input
+                    type="password"
+                    name="confirm"
+                    placeholder="Confirm your password"
+                    minlength="6"
+                    required
+                >
+            </label>
+
+            <button class="btn" type="submit">
+                Register
+            </button>
+
+            <p>
+                Already registered?
+                <a href="login.html">Login</a>
+            </p>
+        </form>
+
+    </main>
+
+    <footer>
+        © 2026 ConfHub
+    </footer>
+
+</body>
+</html>
