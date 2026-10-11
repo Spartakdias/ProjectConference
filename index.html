@@ -1,93 +1,42 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ConfHub | Home</title>
+    <title>Home | ConfHub</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-
-<body>
-
-    <header>
-        <a class="logo" href="index.html">ConfHub</a>
-
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="conferences.html">Conferences</a>
-            <a href="profile.html">Profile</a>
-            <a href="login.html">Login</a>
-        </nav>
-    </header>
+<body data-page="home">
+    <header id="site-header"></header>
 
     <main>
-
         <section class="hero">
-
             <h1>Discover your next conference</h1>
-
-            <p>
-                Find technology, business and science events.
-                Join in one click.
-            </p>
-
-            <a class="btn" href="conferences.html">
-                Explore conferences
-            </a>
-
+            <p>Find technology, business and science events. Join in one click.</p>
+            <p id="welcome" class="welcome"></p>
+            <a class="btn" id="ctaBtn" href="register.html">Get started</a>
         </section>
 
-        <h2>Upcoming conferences</h2>
+        <section>
+            <h2>Features</h2>
+            <div class="cards">
+                <article class="card"><h3>🔍 Search &amp; filter</h3><p class="muted">Find events by name, category or city in seconds.</p></article>
+                <article class="card"><h3>🎟️ Easy registration</h3><p class="muted">Book your tickets online and get a confirmation with a booking ID.</p></article>
+                <article class="card"><h3>👤 Personal account</h3><p class="muted">Track and manage all your bookings in your profile.</p></article>
+            </div>
+        </section>
 
-        <div class="cards">
-
-            <article class="card">
-                <span class="tag">Technology</span>
-                <h3>AI Future Summit</h3>
-                <p class="muted">
-                    📍 Almaty · 📅 12 November 2026
-                </p>
-
-                <a class="btn" href="details.html">
-                    View Details
-                </a>
-            </article>
-
-            <article class="card">
-                <span class="tag">Business</span>
-                <h3>Startup Connect</h3>
-                <p class="muted">
-                    📍 Astana · 📅 18 November 2026
-                </p>
-
-                <a class="btn" href="details.html">
-                    View Details
-                </a>
-            </article>
-
-            <article class="card">
-                <span class="tag">Science</span>
-
-                <h3>Science Forum</h3>
-
-                <p class="muted">
-                    📍 Shymkent · 📅 9 December 2026
-                </p>
-
-                <a class="btn" href="details.html">
-                    View Details
-                </a>
-            </article>
-
-        </div>
-
+        <section>
+            <h2>Upcoming conferences</h2>
+            <div class="cards" id="upcomingCards"></div>
+        </section>
     </main>
 
-    <footer>
-        © 2026 ConfHub · Student project
-    </footer>
+    <footer id="site-footer"></footer>
 
+    <script src="js/storage.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

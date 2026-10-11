@@ -1,156 +1,35 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conferences | ConfHub</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-
-<body>
-
-    <header>
-        <a class="logo" href="index.html">ConfHub</a>
-
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="conferences.html">Conferences</a>
-            <a href="profile.html">Profile</a>
-            <a href="login.html">Login</a>
-        </nav>
-    </header>
+<body data-page="conferences">
+    <header id="site-header"></header>
 
     <main>
-
         <h1>All conferences</h1>
+        <p class="muted">Explore upcoming technology, business and science events.</p>
 
-        <p class="muted">
-            Explore upcoming technology, business and science events.
-        </p>
+        <form class="filters" id="filters" role="search">
+            <input type="search" id="search" placeholder="🔍 Search by title, speaker or city" aria-label="Search conferences">
+            <select id="category" aria-label="Category"></select>
+            <select id="city" aria-label="City"></select>
+            <button class="btn" type="reset">Reset</button>
+        </form>
 
-        <div class="cards">
-
-            <article class="card">
-                <span class="tag">Technology</span>
-
-                <h3>AI Future Summit</h3>
-
-                <p class="muted">
-                    📍 Almaty · 📅 12 November 2026
-                </p>
-
-                <a class="btn" href="details.html">
-                    View Details
-                </a>
-            </article>
-
-            <article class="card">
-                <span class="tag">Business</span>
-
-                <h3>Startup Connect</h3>
-
-                <p class="muted">
-                    📍 Astana · 📅 18 November 2026
-                </p>
-
-                <a class="btn" href="details.html">
-                    View Details
-                </a>
-            </article>
-
-            <article class="card">
-                <span class="tag">Technology</span>
-
-                <h3>Cyber Security Day</h3>
-
-                <p class="muted">
-                    📍 Almaty · 📅 3 December 2026
-                </p>
-
-                <a class="btn" href="details.html">
-                    View Details
-                </a>
-            </article>
-
-            <article class="card">
-                <span class="tag">Science</span>
-
-                <h3>Science Forum</h3>
-
-                <p class="muted">
-                    📍 Shymkent · 📅 9 December 2026
-                </p>
-
-                <a class="btn" href="details.html">
-                    View Details
-                </a>
-            </article>
-
-            <article class="card">
-                <span class="tag">Technology</span>
-
-                <h3>Web Developers Meetup</h3>
-
-                <p class="muted">
-                    📍 Astana · 📅 15 December 2026
-                </p>
-
-                <a class="btn" href="details.html">
-                    View Details
-                </a>
-            </article>
-
-            <article class="card">
-                <span class="tag">Business</span>
-
-                <h3>Business Leaders 2027</h3>
-
-                <p class="muted">
-                    📍 Almaty · 📅 22 January 2027
-                </p>
-
-                <a class="btn" href="details.html">
-                    View Details
-                </a>
-            </article>
-
-            <article class="card">
-                <span class="tag">Science</span>
-
-                <h3>Robotics Expo</h3>
-
-                <p class="muted">
-                    📍 Karaganda · 📅 6 February 2027
-                </p>
-
-                <a class="btn" href="details.html">
-                    View Details
-                </a>
-            </article>
-
-            <article class="card">
-                <span class="tag">Technology</span>
-
-                <h3>Cloud Tech Conference</h3>
-
-                <p class="muted">
-                    📍 Astana · 📅 20 February 2027
-                </p>
-
-                <a class="btn" href="details.html">
-                    View Details
-                </a>
-            </article>
-
-        </div>
-
+        <p class="muted" id="resultCount"></p>
+        <div class="cards" id="conferenceCards"></div>
+        <p class="message" id="noResults" hidden>No conferences match your search. Try different filters.</p>
     </main>
 
-    <footer>
-        © 2026 ConfHub
-    </footer>
+    <footer id="site-footer"></footer>
 
+    <script src="js/storage.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,62 +1,38 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login | ConfHub</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-
-<body>
-    <header>
-        <a class="logo" href="index.html">ConfHub</a>
-
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="conferences.html">Conferences</a>
-            <a href="register.html">Register</a>
-        </nav>
-    </header>
+<body data-page="login">
+    <header id="site-header"></header>
 
     <main>
-        <form class="panel" action="profile.html" method="get">
+        <form class="panel" id="loginForm" novalidate>
             <h1>Welcome back</h1>
-            <label>
-                Email
-                <input
-                    type="email"
-                    name="email"
-                    placeholder="Enter your email"
-                    required
-                >
+            <p class="form-message"></p>
+
+            <label>Email
+                <input type="email" name="email" autocomplete="email" placeholder="student@email.com">
+            </label>
+            <label>Password
+                <input type="password" name="password" autocomplete="current-password">
             </label>
 
-            <label>
-                Password
-                <input
-                    type="password"
-                    name="password"
-                    placeholder="Enter your password"
-                    required
-                >
-            </label>
-
-            <button class="btn" type="submit">
-                Login
-            </button>
-            <p>
-                New here?
-                <a href="register.html">Create account</a>
-            </p>
+            <button class="btn full" type="submit">LOGIN</button>
+            <p class="center"><a href="#" id="forgotLink">Forgot password?</a></p>
+            <p class="center muted">Don't have an account? <a href="register.html">Register</a></p>
+            <p class="center muted small-text">Demo admin: admin@confhub.com / admin123</p>
         </form>
-
     </main>
 
-    <footer>
-        © 2026 ConfHub
-    </footer>
+    <footer id="site-footer"></footer>
 
+    <script src="js/storage.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

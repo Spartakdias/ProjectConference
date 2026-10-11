@@ -1,101 +1,51 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register | ConfHub</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-
-<body>
-
-    <header>
-        <a class="logo" href="index.html">ConfHub</a>
-
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="conferences.html">Conferences</a>
-            <a href="login.html">Login</a>
-        </nav>
-    </header>
+<body data-page="register">
+    <header id="site-header"></header>
 
     <main>
-
-        <form class="panel" action="#" method="post">
-
+        <form class="panel" id="registerForm" novalidate>
             <h1>Create account</h1>
+            <p class="form-message"></p>
 
-            <label>
-                First name
-                <input
-                    type="text"
-                    name="first"
-                    placeholder="Enter your first name"
-                    minlength="2"
-                    required
-                >
+            <label>First Name
+                <input type="text" name="firstName" autocomplete="given-name">
+            </label>
+            <label>Last Name
+                <input type="text" name="lastName" autocomplete="family-name">
+            </label>
+            <label>Email
+                <input type="email" name="email" autocomplete="email" placeholder="student@email.com">
+            </label>
+            <label>Phone Number (optional)
+                <input type="tel" name="phone" placeholder="+77001234567">
+            </label>
+            <label>Date of Birth (optional)
+                <input type="date" name="dob">
+            </label>
+            <label>Password
+                <input type="password" name="password" autocomplete="new-password">
+            </label>
+            <label>Confirm Password
+                <input type="password" name="confirmPassword" autocomplete="new-password">
             </label>
 
-            <label>
-                Last name
-                <input
-                    type="text"
-                    name="last"
-                    placeholder="Enter your last name"
-                    minlength="2"
-                    required
-                >
-            </label>
-
-            <label>
-                Email
-                <input
-                    type="email"
-                    name="email"
-                    placeholder="Enter your email"
-                    required
-                >
-            </label>
-
-            <label>
-                Password
-                <input
-                    type="password"
-                    name="password"
-                    placeholder="Create a password"
-                    minlength="6"
-                    required
-                >
-            </label>
-
-            <label>
-                Confirm password
-                <input
-                    type="password"
-                    name="confirm"
-                    placeholder="Confirm your password"
-                    minlength="6"
-                    required
-                >
-            </label>
-
-            <button class="btn" type="submit">
-                Register
-            </button>
-
-            <p>
-                Already registered?
-                <a href="login.html">Login</a>
-            </p>
+            <button class="btn full" type="submit">REGISTER</button>
+            <p class="center muted">Already have an account? <a href="login.html">Login</a></p>
         </form>
-
     </main>
 
-    <footer>
-        © 2026 ConfHub
-    </footer>
+    <footer id="site-footer"></footer>
 
+    <script src="js/storage.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
